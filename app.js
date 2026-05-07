@@ -1572,7 +1572,7 @@ const HELP_STEPS = [
   },
   {
     title: 'Edit',
-    body: 'When a layer is selected, you can change its size and color from the top toolbar. ',
+    body: 'When a layer is selected, you can change the size and color of the shape, text or image on that layer from the top toolbar. ',
   },
   {
     title: 'Canvas',
@@ -1588,15 +1588,11 @@ const HELP_STEPS = [
   },
   {
     title: 'Delete',
-    body: 'With a layer selected, press <strong>Delete</strong> to remove its recording while keeping the shape in place. Press <strong>Delete</strong> again (with no recording) to remove the shape entirely.',
+    body: 'With a layer selected, press <strong>Delete</strong> to remove its animation. Press <strong>Delete</strong> again to remove the object entirely.',
   },
   {
-    title: 'Save',
-    body: 'Saving stores your draft in your browser locally, so it will not survive a hard refresh or incognito mode. Export any completed projects to make sure you do not lose any work.',
-  },
-  {
-    title: 'Export',
-    body: 'When you are done, click the <strong>Export</strong> button to render and download your animation as a WebM file.',
+    title: 'Save & Export',
+    body: 'Saving stores your draft in your browser locally, so it will not survive a hard refresh or incognito mode. Export any completed projects to make sure you do not lose any work, it will downlaod as a WebM file.',
   },
 ];
 
