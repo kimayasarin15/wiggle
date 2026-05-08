@@ -1568,11 +1568,11 @@ document.getElementById('modal-cancel').addEventListener('click', () => {
 const HELP_STEPS = [
   {
     title: 'Draw',
-    body: 'Select an image, text or shape from the toolbar. Add or drag it onto the canvas onto the active layer. Each layer holds one single object and its own motion path. Use the layer tabs at the bottom to add or switch between layers. ',
+    body: 'Select an image, text or shape from the toolbar and add or drag it onto the canvas. You can add or switch between objects through the bottom panel. ',
   },
   {
     title: 'Edit',
-    body: 'When a layer is selected, you can change the size and color of the shape, text or image on that layer from the top toolbar. ',
+    body: 'When an object is selected from the bottom panel, highlighted with a blue outline, you can change the size and color of the shape, text or image from the top toolbar. ',
   },
   {
     title: 'Canvas',
@@ -1588,7 +1588,7 @@ const HELP_STEPS = [
   },
   {
     title: 'Delete',
-    body: 'With a layer selected, press <strong>Delete</strong> to remove its animation. Press <strong>Delete</strong> again to remove the object entirely.',
+    body: 'With an object selected from the bottom panel, press <strong>Delete</strong> to remove its animation. Press <strong>Delete</strong> again to remove the object entirely.',
   },
   {
     title: 'Save & Export',
