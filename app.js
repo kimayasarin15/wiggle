@@ -283,8 +283,8 @@ function drawSelectionOutline(shape, dx = 0, dy = 0) {
     w = Math.abs(shape.x2 - shape.x1) * W + PAD * 2;
     h = Math.abs(shape.y2 - shape.y1) * H + PAD * 2;
   } else if (shape.type === 'image') {
-    const iw = shape.w * W * (shape.scale || 1);
-    const ih = shape.h * H * (shape.scale || 1);
+    const iw = shape.w * W;
+    const ih = shape.h * H;
     x = shape.cx * W + dx - iw / 2 - PAD;
     y = shape.cy * H + dy - ih / 2 - PAD;
     w = iw + PAD * 2; h = ih + PAD * 2;
