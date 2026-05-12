@@ -476,11 +476,23 @@ btnRecord.addEventListener('click', () => {
   setAppMode('record');
 });
 
+// Initialise pill position once layout is ready
+requestAnimationFrame(updateModePill);
+
+function updateModePill() {
+  const pill = document.getElementById('mode-pill');
+  const activeBtn = appMode === 'draw' ? btnDraw : btnRecord;
+  pill.style.width = activeBtn.offsetWidth + 'px';
+  pill.style.transform = `translateX(${activeBtn.offsetLeft}px)`;
+  pill.classList.toggle('animate', appMode === 'record');
+}
+
 function setAppMode(mode) {
   appMode = mode;
   // Active / inactive states
   btnDraw.classList.toggle('active', mode === 'draw');
   btnRecord.classList.toggle('active', mode === 'record');
+  updateModePill();
   document.getElementById('draw-tools').classList.toggle('hidden', mode !== 'draw');
   document.getElementById('record-tools').classList.toggle('hidden', mode !== 'record');
   if (mode === 'draw') {
