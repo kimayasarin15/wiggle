@@ -89,7 +89,7 @@
   }
   
   #splash-video {
-    width: 800px;
+    width: min(800px, 90vw);
     height: auto;
   }
 
