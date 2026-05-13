@@ -12,6 +12,7 @@ window.addEventListener('load', () => {
   video.addEventListener('ended', dismiss, { once: true });
   video.addEventListener('error', dismiss, { once: true });
   setTimeout(dismiss, 6000);
+  video.play().catch(dismiss); // force play on mobile, dismiss if blocked
 });
 
 // ─── STATE ────────────────────────────────────────────────────────────────────
