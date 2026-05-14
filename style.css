@@ -90,7 +90,7 @@
   
   #splash-video {
     width: min(800px, 98vw);
-    height: auto;
+    aspect-ratio: 16 / 9;
   }
 
   #toolbar-logo {
