@@ -306,7 +306,7 @@ function drawSelectionOutline(shape, dx = 0, dy = 0) {
     y = shape.cy * H + dy - ih / 2 - PAD;
     w = iw + PAD * 2; h = ih + PAD * 2;
   } else if (shape.type === 'text') {
-    const fs = shape.fontSize * Math.min(W, H) * (shape.scale || 1);
+    const fs = shape.fontSize * H * (shape.scale || 1);
     const approxW = shape.text.length * fs * 0.55;
     x = shape.cx * W + dx - approxW / 2 - PAD;
     y = shape.cy * H + dy - fs - PAD;
@@ -1099,7 +1099,7 @@ canvas.addEventListener('touchmove', e => {
 
   if (appMode === 'draw' && isDrawing && drawStart) {
     const cur   = canvasPos(pt);
-    const ghost = buildShapeFromDrag(drawStart, cur);
+    const ghost = buildShapeFromDrag(drawStart, cur, e.shiftKey);
     drawFrame(playheadPct);
     if (ghost) drawGhost(ghost);
     return;
@@ -1165,7 +1165,7 @@ canvas.addEventListener('touchend', e => {
   isDrawing = false;
   const pt    = touchPt(e);
   const end   = canvasPos(pt);
-  const shape = buildShapeFromDrag(drawStart, end);
+  const shape = buildShapeFromDrag(drawStart, end, e.shiftKey);
   drawStart   = null;
   if (!shape) return;
 
